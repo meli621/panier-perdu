@@ -33,8 +33,8 @@ export default function Cgv() {
 
       <h2>3. Prix et paiement</h2>
       <p>
-        Le prix est de {PRICE_EUROS} € par mois et par boutique. [À COMPLÉTER :
-        préciser « TTC » ou « HT + TVA » selon ton statut.] Le paiement est
+        Le prix est de {PRICE_EUROS} € par mois et par boutique. {LEGAL.tva}, le
+        prix indiqué est donc le prix payé. Le paiement est
         prélevé chaque mois par carte bancaire via Stripe, à partir de la date
         de souscription. Les relances sont illimitées.
       </p>
