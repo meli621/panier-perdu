@@ -17,6 +17,11 @@ export default function Cgv() {
         Perdu, un service de relance par e-mail des paniers abandonnés pour les
         boutiques en ligne, proposé par {LEGAL.nom} ({LEGAL.siret}).
       </p>
+      <p>
+        Le service est réservé aux professionnels qui exploitent une boutique
+        en ligne. En souscrivant, tu déclares agir pour les besoins de ton
+        activité professionnelle.
+      </p>
 
       <h2>2. Service</h2>
       <p>
@@ -55,13 +60,12 @@ export default function Cgv() {
         {REFUND_DELAY} sur le moyen de paiement utilisé.
       </p>
 
-      <h2>6. Droit de rétractation</h2>
+      <h2>6. Mise en route du service</h2>
       <p>
-        Si tu achètes en tant que consommateur, tu disposes d’un délai de
-        rétractation de 14 jours à compter de la souscription. En demandant la
-        mise en route immédiate du service, tu reconnais que son exécution
-        commence avant la fin de ce délai ; la garantie ci-dessus s’applique
-        dans tous les cas.
+        Après ton paiement, nous mettons le service en route pour ta boutique
+        sous 72 heures et te prévenons par e-mail. La garantie de l’article 5
+        s’applique dès ton premier paiement, que le service soit déjà en route
+        ou non.
       </p>
 
       <h2>7. Données personnelles</h2>
@@ -76,9 +80,9 @@ export default function Cgv() {
       <h2>8. Droit applicable et litiges</h2>
       <p>
         Les présentes conditions sont soumises au droit français. En cas de
-        litige, une solution amiable sera recherchée avant toute action. Le
-        consommateur peut recourir gratuitement à un médiateur de la
-        consommation : [À COMPLÉTER : nom et coordonnées du médiateur].
+        litige, une solution amiable sera recherchée avant toute action. À
+        défaut d’accord, les tribunaux compétents sont ceux du ressort du
+        siège de l’éditeur.
       </p>
     </LegalPage>
   );
