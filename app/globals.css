@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --encre: #14110f;
+  --papier: #f6f1e7;
+  --braise: #d9480f;
+}
+
+html {
+  background: var(--papier);
+  color: var(--encre);
+}
+
+body {
+  min-height: 100dvh;
+}
