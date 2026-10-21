@@ -159,21 +159,14 @@ export default function Accueil() {
             </p>
           </div>
 
-          <div className="mt-6">
-            <button
-              type="button"
-              disabled
-              className="inline-flex min-h-14 w-full cursor-not-allowed items-center justify-center rounded-sm bg-encre/60 px-6 text-lg font-bold text-white"
-            >
-              Commencer
+          <form action="/api/checkout" method="post" className="mt-6">
+            <button type="submit" className={boutonPrincipal}>
+              Commencer, {PRICE_EUROS} € par mois
             </button>
             <p className="mt-3 text-center text-sm text-sourdine">
               Sans engagement, résiliable à tout moment.
             </p>
-            <p className="mt-2 text-center text-sm font-bold text-braise">
-              Le paiement ouvre très bientôt.
-            </p>
-          </div>
+          </form>
         </section>
       </main>
 
