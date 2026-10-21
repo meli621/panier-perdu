@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Footer";
 import { GUARANTEE_DAYS, PRICE_EUROS, REFUND_DELAY } from "@/lib/site";
 
 const boutonPrincipal =
@@ -170,9 +171,7 @@ export default function Accueil() {
         </section>
       </main>
 
-      <footer className="mx-auto max-w-2xl border-t border-filet px-5 py-8 text-sm text-sourdine">
-        <p>© {new Date().getFullYear()} Panier Perdu</p>
-      </footer>
+      <Footer />
 
       <div className="fixed inset-x-0 bottom-0 z-10 border-t border-filet bg-papier/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:hidden">
         <a href="#offre" className={boutonPrincipal}>
