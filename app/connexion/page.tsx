@@ -27,16 +27,22 @@ async function envoyerLien(formData: FormData) {
     },
   });
 
-  if (error) redirect("/connexion?erreur=envoi");
+  if (error) {
+    console.error("Envoi du lien impossible :", error.status, error.code, error.message);
+    const detail = encodeURIComponent(
+      `${error.status ?? ""} ${error.code ?? error.name ?? ""}`.trim(),
+    );
+    redirect(`/connexion?erreur=envoi&detail=${detail}`);
+  }
   redirect("/connexion?envoye=1");
 }
 
 export default async function Connexion({
   searchParams,
 }: {
-  searchParams: Promise<{ envoye?: string; erreur?: string }>;
+  searchParams: Promise<{ envoye?: string; erreur?: string; detail?: string }>;
 }) {
-  const { envoye, erreur } = await searchParams;
+  const { envoye, erreur, detail } = await searchParams;
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-md flex-col justify-center px-5 py-12">
@@ -81,6 +87,11 @@ export default async function Connexion({
               {erreur === "email"
                 ? "Cette adresse e-mail ne semble pas valide. Vérifie-la et réessaie."
                 : "Le lien n’a pas pu être envoyé. Réessaie dans un instant."}
+              {detail ? (
+                <span className="mt-1 block text-xs text-sourdine">
+                  Code technique : {detail.slice(0, 80)}
+                </span>
+              ) : null}
             </p>
           ) : null}
 
