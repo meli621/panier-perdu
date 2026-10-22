@@ -27,12 +27,20 @@ export default function Accueil() {
     <div className="pb-28 md:pb-0">
       <header className="mx-auto flex max-w-2xl items-center justify-between px-5 pt-5">
         <span className="font-serif text-xl font-bold">Panier Perdu</span>
-        <a
-          href="#offre"
-          className="hidden min-h-11 items-center text-sm font-bold underline underline-offset-4 md:inline-flex"
-        >
-          Voir l’offre
-        </a>
+        <nav className="flex items-center gap-5 text-sm font-bold">
+          <a
+            href="#offre"
+            className="hidden min-h-11 items-center underline underline-offset-4 md:inline-flex"
+          >
+            Voir l’offre
+          </a>
+          <a
+            href="/connexion"
+            className="inline-flex min-h-11 items-center underline underline-offset-4"
+          >
+            Connexion
+          </a>
+        </nav>
       </header>
 
       <main className="mx-auto max-w-2xl px-5">
